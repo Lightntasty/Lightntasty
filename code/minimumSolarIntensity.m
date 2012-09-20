@@ -1,5 +1,6 @@
 function I = minimumSolarIntensity(planet)
     global solarConstant
     global astronomicalUnit
-    I = solarConstant * (astronomicalUnit / (planet.a / (1 - planet.e)))^2;
+    apoapsis = planet.a / (1 - planet.e);
+    I = solarConstant * (astronomicalUnit / apohelion)^2;
 end
