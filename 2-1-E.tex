@@ -1,18 +1,50 @@
 %% E. Power
 
+%% 1. Define the key power subsystem requirements and, in particular,
+%% the total amount of power required by the spacecraft during all the
+%% mission phases.
+
+\subsubsection{Key requirements.}
+
+The key requirement for the power system is to provide adequate power
+for the duration of the whole mission. Solar panels are used as the
+power source since these are asked for in the project reader. Solar
+array degradation must be taken to account to provide adequate power
+until the end of mission. Batteries are necessary to provide power
+during eclipses.
+
+%% 2. Quantify the available solar energy, i.e. the solar intensity
+%% and the direction of solar radiation, the duration of day time and
+%% night time (eclipse) periods, the energy received from the planet.
+
+\subsubsection{Available solar energy.}
+
 The minimum solar intensity $I$ at Jupiter occurs at the apohelion and is
 \begin{equation}
   I_{\mathrm{min}} = I_{\si{AU}} (\frac{\SI{1}{AU} (1 - e)}{a})^2
   \approx \SI{45.7}{W/m^2}
 \end{equation}
-
-%% 1. Define the key power subsystem requirements and, in particular,
-%% the total amount of power required by the spacecraft during all the
-%% mission phases.
-
-%% 2. Quantify the available solar energy, i.e. the solar intensity
-%% and the direction of solar radiation, the duration of day time and
-%% night time (eclipse) periods, the energy received from the planet.
+The mean motion $n$ in juno orbit is
+\begin{equation}
+  n = \sqrt{\frac{\mu}{a}}
+\end{equation}
+Then, the duration of a full orbit is
+\begin{equation}
+  T = \frac{2 \pi}{n} \approx \SI{137}{min}
+\end{equation}
+The angular span of an eclipse is
+\begin{equation}
+  \theta = 2 * \arcsin \frac{R}{R + h} \approx \ang{125}
+\end{equation}
+where $R$ is the radius of Europa and $h$ is the altitude of the
+circular orbit. The duration of an eclipse is
+\begin{equation}
+  T_{\mathrm{e}} = \frac{\theta}{n} \approx \SI{47}{min}
+\end{equation}
+and the duration of a day is
+\begin{equation}
+  T_{\mathrm{d}} = \frac{2 \pi - \theta}{n} \approx \SI{89}{min}
+\end{equation}
 
 %% 3. Make a preliminary dimensioning of the solar arrays and, in
 %% particular, a first estimation of their size (note: detailed design
