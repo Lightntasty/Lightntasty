@@ -22,28 +22,37 @@ during eclipses.
 The minimum solar intensity $I$ at Jupiter occurs at the apohelion and is
 \begin{equation}
   I_{\mathrm{min}} = I_{\si{AU}} \left(\frac{\SI{1}{AU} (1 - e)}{a}\right)^2
-  \approx \SI{45.7}{W/m^2}
+  \approx \europaorbitI
 \end{equation}
 The mean motion $n$ in Europa orbit is
 \begin{equation}
-  n = \sqrt{\frac{\mu}{a}}
+  n = \sqrt{\frac{\mu}{a^3}} \approx \europaorbitn
 \end{equation}
 Then, the duration of a full orbit is
 \begin{equation}
-  T = \frac{2 \pi}{n} \approx \SI{137}{min}
+  T = \frac{2 \pi}{n} \approx \europaorbitT
 \end{equation}
 The angular span of an eclipse is
 \begin{equation}
-  \theta = 2 \arcsin \frac{R}{R + h} \approx \ang{125}
+  \theta = 2 \arcsin \frac{R}{R + h} \approx \europaorbittheta
 \end{equation}
 where $R$ is the radius of Europa and $h$ is the altitude of the
 circular orbit. The duration of an eclipse is
 \begin{equation}
-  T_{\mathrm{e}} = \frac{\theta}{n} \approx \SI{47}{min}
+  T_{\mathrm{e}} = \frac{\theta}{n} \approx \europaorbitTe
 \end{equation}
 and the duration of a day is
 \begin{equation}
-  T_{\mathrm{d}} = \frac{2 \pi - \theta}{n} \approx \SI{89}{min}
+  T_{\mathrm{d}} = \frac{2 \pi - \theta}{n} \approx \europaorbitTd
+\end{equation}
+Therefore the power after efficiency losses which the solar panels
+must provide during day is
+\begin{equation}
+  P = \frac{T P_{\mathrm{average}}}{T_{\mathrm{d}}}
+\end{equation}
+and the capacity which the batteries must provide is
+\begin{equation}
+  E = T_{\mathrm{e}} P_{\mathrm{average}}
 \end{equation}
 
 %% 3. Make a preliminary dimensioning of the solar arrays and, in
